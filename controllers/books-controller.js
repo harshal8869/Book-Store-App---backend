@@ -7,7 +7,7 @@ const getAllBooks = async (req, res, next) => {
         books = await Book.find();
     }
     catch (err) {
-        console.log(err);
+        console.err(err);
     }
 
     if (!books) {
@@ -25,7 +25,7 @@ const getById = async (req, res, next) => {
         
     } 
     catch (err) {
-        console.log(err);
+        console.err(err);
     }
 
     if (!book) {
