@@ -23,7 +23,8 @@ const getById = async (req, res, next) => {
     try {
         book = await Book.findById(id);
         
-    } catch (err) {
+    } 
+    catch (err) {
         console.log(err);
     }
 
