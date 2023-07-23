@@ -7,7 +7,7 @@ const getAllBooks = async (req, res, next) => {
         books = await Book.find();
     }
     catch (err) {
-        console.err(err);
+        console.log(err);
     }
 
     if (!books) {
@@ -25,7 +25,7 @@ const getById = async (req, res, next) => {
         
     } 
     catch (err) {
-        console.err(err);
+        console.log(err);
     }
 
     if (!book) {
@@ -49,7 +49,8 @@ const addBook = async (req, res, next) => {
             image
         });
         await book.save();
-    } catch (err) {
+    }
+    catch (err) {
         console.log(err);
     }
 
