@@ -24,9 +24,7 @@ const getById = async (req, res, next) => {
         book = await Book.findById(id);
         
     } 
-    catch (err) {
-        console.log(err);
-    }
+   
 
     if (!book) {
         return res.status(404).json({ message: "No books found" });
